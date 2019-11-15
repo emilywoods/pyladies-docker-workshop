@@ -1,2 +1,2 @@
 .idea/
-helloworld/.venv/
+**.venv/
