@@ -22,6 +22,18 @@ The application code is located within the `/helloworld`_ directory. This is a s
 application which takes in one environment variable, ``NAME`` and runs a web server on
 port 5000.
 
+Optional: Install and run the application
+-----------------------------------------
+
+.. code:: bash
+
+   $ python -m venv .venv
+   $ source .venv/bin/activate
+   $ pip install -e .
+   $ python app.py
+
+Navigate to http://localhost:5000/
+
 Complete the Dockerfile
 -----------------------
 
