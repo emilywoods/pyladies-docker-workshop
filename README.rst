@@ -22,8 +22,11 @@ The application code is located within the `/helloworld`_ directory. This is a s
 application which takes in one environment variable, ``NAME`` and runs a web server on
 port 5000.
 
-Optional: Install and run the application
------------------------------------------
+Install and run the application
+-------------------------------
+
+Get started with the usual approach to installing and running the application. We can
+later compare this approach with how you would run the application with Docker.
 
 .. code:: bash
 
@@ -68,7 +71,15 @@ Run your container
 
    $ docker logs <CONTAINER-ID>
 
-6. Stop the container::
+6. Connect to the container::
+
+   $ docker exec -it <CONTAINER-ID> sh
+
+From within the container you can show the environment variables::
+
+   $ echo $NAME
+
+7. Stop the container::
 
    $ docker stop <IMAGE-TAG>
 
@@ -114,9 +125,28 @@ To stop::
 
   $ docker-compose down
 
+Further learning
+----------------
+
+Well done! You've just:
+
+- Made a Dockerfile
+- Built, run and explored the docker container
+- Used Docker Compose
+
+That's a lot to take in! What's next?
+
+If you want to learn more about Docker and containers, we recommend:
+
+- `Multi-stage`_ Docker builds
+- Pushing to and pulling from Dockerhub_
+- Conference talk: `Container Operator's Manual by Alice Goldfuss`_
 
 .. _Docker: https://www.docker.com/
 .. _/helloworld: ./helloworld
 .. _Dockerfile: ./helloworld/Dockerfile
 .. _Docker Compose: https://docs.docker.com/compose/
 .. _docker-compose: docker-compose.yaml
+.. _Dockerhub: https://docs.docker.com/docker-hub/repos/
+.. _Multi-stage: https://docs.docker.com/develop/develop-images/multistage-build/
+.. _Container Operator's Manual by Alice Goldfuss: https://www.youtube.com/watch?v=Fm2tDgf40ss
