@@ -62,9 +62,10 @@ Once it's built, you can show your built images with::
 
    $ docker images
 
-2. Run the container::
+2. Run the container. ``--publish`` maps a port from within the container to a port on your local machine,
+   and ``-env`` defines an environment variable that will be present in your container's environment::
 
-   $ docker run -p 5000:5000 --env NAME=<YOUR NAME> <IMAGE-TAG>
+   $ docker run --publish 5000:5000 --env NAME=<YOUR NAME> <IMAGE-TAG>
 
 3. Go to https://localhost:5000
 
