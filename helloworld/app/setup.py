@@ -5,7 +5,7 @@ setup(
     python_requires=">=3.7",
     install_requires=[
         "flask==1.1.1",
-        "requests==2.22.0",
+        "requests==2.31.0",
     ],
     classifiers=[
         "Development Status :: 1 - Beta",
